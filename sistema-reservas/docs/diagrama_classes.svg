@@ -1,0 +1,158 @@
+<svg viewBox="0 0 1480 780" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Segoe UI, sans-serif"><rect x="0" y="0" width="1480" height="780" fill="#f5f7f7"/>
+<defs>
+  <marker id="arrowOpen" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+    <path d="M1,1 L9,5 L1,9" fill="none" stroke="#9aa8a5" stroke-width="1.4"/>
+  </marker>
+</defs>
+<text x="30" y="34" font-size="20" font-weight="700" fill="#163d3a">Diagrama de Classes — Sistema de Reservas e Empréstimos</text>
+<text x="30" y="54" font-size="12.5" fill="#5c6d69">Módulo Web (PHP orientado a objetos) · Grupo A</text>
+<g transform="translate(0,0)"><g font-family="Consolas, Menlo, monospace">
+<rect x="30" y="80" width="300" height="282" rx="6" fill="#ffffff" stroke="#1c3d3a" stroke-width="1.4"/>
+<rect x="30" y="80" width="300" height="34" rx="6" fill="#245652"/>
+<rect x="30" y="106" width="300" height="8" fill="#245652"/>
+<text x="180.0" y="102" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Usuario</text>
+<rect x="30" y="114" width="300" height="134" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="42" y="132" font-size="12.5" fill="#1c2422">- id: int</text>
+<text x="42" y="152" font-size="12.5" fill="#1c2422">- nome: string</text>
+<text x="42" y="172" font-size="12.5" fill="#1c2422">- email: string</text>
+<text x="42" y="192" font-size="12.5" fill="#1c2422">- senha: string</text>
+<text x="42" y="212" font-size="12.5" fill="#1c2422">- tipo: string</text>
+<text x="42" y="232" font-size="12.5" fill="#1c2422">- criadoEm: string</text>
+<rect x="30" y="248" width="300" height="114" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="42" y="266" font-size="12.5" fill="#1c2422">+ cadastrar(): bool</text>
+<text x="42" y="286" font-size="12.5" fill="#1c2422">+ autenticar(email, senha): Usuario</text>
+<text x="42" y="306" font-size="12.5" fill="#1c2422">+ emailExiste(email): bool</text>
+<text x="42" y="326" font-size="12.5" fill="#1c2422">+ buscarPorId(id): Usuario</text>
+<text x="42" y="346" font-size="12.5" fill="#1c2422">+ listarTodos(): array</text>
+</g></g>
+<g font-family="Consolas, Menlo, monospace">
+<rect x="380" y="80" width="320" height="362" rx="6" fill="#ffffff" stroke="#1c3d3a" stroke-width="1.4"/>
+<rect x="380" y="80" width="320" height="34" rx="6" fill="#245652"/>
+<rect x="380" y="106" width="320" height="8" fill="#245652"/>
+<text x="540.0" y="102" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Reserva</text>
+<rect x="380" y="114" width="320" height="154" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="392" y="132" font-size="12.5" fill="#1c2422">- id: int</text>
+<text x="392" y="152" font-size="12.5" fill="#1c2422">- usuarioId: int</text>
+<text x="392" y="172" font-size="12.5" fill="#1c2422">- recursoId: int</text>
+<text x="392" y="192" font-size="12.5" fill="#1c2422">- dataReserva: string</text>
+<text x="392" y="212" font-size="12.5" fill="#1c2422">- turno: string</text>
+<text x="392" y="232" font-size="12.5" fill="#1c2422">- status: string</text>
+<text x="392" y="252" font-size="12.5" fill="#1c2422">- criadoEm: string</text>
+<rect x="380" y="268" width="320" height="174" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="392" y="286" font-size="12.5" fill="#1c2422">+ existeConflito(recursoId, data, turno): bool</text>
+<text x="392" y="306" font-size="12.5" fill="#1c2422">+ turnosOcupados(recursoId, data): array</text>
+<text x="392" y="326" font-size="12.5" fill="#1c2422">+ reservar(): bool</text>
+<text x="392" y="346" font-size="12.5" fill="#1c2422">+ cancelar(id): bool</text>
+<text x="392" y="366" font-size="12.5" fill="#1c2422">+ listarPorUsuario(usuarioId): array</text>
+<text x="392" y="386" font-size="12.5" fill="#1c2422">+ listarTodas(): array</text>
+<text x="392" y="406" font-size="12.5" fill="#1c2422">+ contarAtivas(): int</text>
+<text x="392" y="426" font-size="12.5" fill="#1c2422">+ rotuloTurno(turno): string «static»</text>
+</g>
+<g font-family="Consolas, Menlo, monospace">
+<rect x="750" y="80" width="320" height="362" rx="6" fill="#ffffff" stroke="#1c3d3a" stroke-width="1.4"/>
+<rect x="750" y="80" width="320" height="34" rx="6" fill="#245652"/>
+<rect x="750" y="106" width="320" height="8" fill="#245652"/>
+<text x="910.0" y="102" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Recurso</text>
+<rect x="750" y="114" width="320" height="174" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="762" y="132" font-size="12.5" fill="#1c2422">- id: int</text>
+<text x="762" y="152" font-size="12.5" fill="#1c2422">- nome: string</text>
+<text x="762" y="172" font-size="12.5" fill="#1c2422">- descricao: string</text>
+<text x="762" y="192" font-size="12.5" fill="#1c2422">- categoriaId: int</text>
+<text x="762" y="212" font-size="12.5" fill="#1c2422">- setorId: int</text>
+<text x="762" y="232" font-size="12.5" fill="#1c2422">- foto: string</text>
+<text x="762" y="252" font-size="12.5" fill="#1c2422">- disponivel: bool</text>
+<text x="762" y="272" font-size="12.5" fill="#1c2422">- criadoEm: string</text>
+<rect x="750" y="288" width="320" height="154" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="762" y="306" font-size="12.5" fill="#1c2422">+ tratarUploadFoto(arquivo): string</text>
+<text x="762" y="326" font-size="12.5" fill="#1c2422">+ salvar(): bool</text>
+<text x="762" y="346" font-size="12.5" fill="#1c2422">+ excluir(id): bool</text>
+<text x="762" y="366" font-size="12.5" fill="#1c2422">+ buscarPorId(id): array</text>
+<text x="762" y="386" font-size="12.5" fill="#1c2422">+ listarTodos(categoriaId): array</text>
+<text x="762" y="406" font-size="12.5" fill="#1c2422">+ contarTotal(): int</text>
+<text x="762" y="426" font-size="12.5" fill="#1c2422">+ contarDisponiveis(): int</text>
+</g>
+<g font-family="Consolas, Menlo, monospace">
+<rect x="1120" y="80" width="320" height="222" rx="6" fill="#ffffff" stroke="#1c3d3a" stroke-width="1.4"/>
+<rect x="1120" y="80" width="320" height="34" rx="6" fill="#245652"/>
+<rect x="1120" y="106" width="320" height="8" fill="#245652"/>
+<text x="1280.0" y="102" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Categoria</text>
+<rect x="1120" y="114" width="320" height="74" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="1132" y="132" font-size="12.5" fill="#1c2422">- id: int</text>
+<text x="1132" y="152" font-size="12.5" fill="#1c2422">- nome: string</text>
+<text x="1132" y="172" font-size="12.5" fill="#1c2422">- descricao: string</text>
+<rect x="1120" y="188" width="320" height="114" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="1132" y="206" font-size="12.5" fill="#1c2422">+ salvar(): bool</text>
+<text x="1132" y="226" font-size="12.5" fill="#1c2422">+ excluir(id): bool</text>
+<text x="1132" y="246" font-size="12.5" fill="#1c2422">+ buscarPorId(id): array</text>
+<text x="1132" y="266" font-size="12.5" fill="#1c2422">+ listarTodas(): array</text>
+<text x="1132" y="286" font-size="12.5" fill="#1c2422">+ contarTotal(): int</text>
+</g>
+<g font-family="Consolas, Menlo, monospace">
+<rect x="1120" y="502" width="320" height="222" rx="6" fill="#ffffff" stroke="#1c3d3a" stroke-width="1.4"/>
+<rect x="1120" y="502" width="320" height="34" rx="6" fill="#245652"/>
+<rect x="1120" y="528" width="320" height="8" fill="#245652"/>
+<text x="1280.0" y="524" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Setor</text>
+<rect x="1120" y="536" width="320" height="74" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="1132" y="554" font-size="12.5" fill="#1c2422">- id: int</text>
+<text x="1132" y="574" font-size="12.5" fill="#1c2422">- nome: string</text>
+<text x="1132" y="594" font-size="12.5" fill="#1c2422">- descricao: string</text>
+<rect x="1120" y="610" width="320" height="114" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="1132" y="628" font-size="12.5" fill="#1c2422">+ salvar(): bool</text>
+<text x="1132" y="648" font-size="12.5" fill="#1c2422">+ excluir(id): bool</text>
+<text x="1132" y="668" font-size="12.5" fill="#1c2422">+ buscarPorId(id): array</text>
+<text x="1132" y="688" font-size="12.5" fill="#1c2422">+ listarTodos(): array</text>
+<text x="1132" y="708" font-size="12.5" fill="#1c2422">+ contarTotal(): int</text>
+</g>
+<g font-family="Consolas, Menlo, monospace">
+<rect x="30" y="502" width="300" height="238" rx="6" fill="#ffffff" stroke="#1c3d3a" stroke-width="1.4"/>
+<rect x="30" y="502" width="300" height="50" rx="6" fill="#245652"/>
+<rect x="30" y="544" width="300" height="8" fill="#245652"/>
+<text x="180.0" y="518" text-anchor="middle" font-size="11" fill="#dfeeec" font-style="italic">&#171;utilitário&#187;</text>
+<text x="180.0" y="540" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Auth</text>
+<rect x="30" y="552" width="300" height="14" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<rect x="30" y="566" width="300" height="174" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="42" y="584" font-size="12.5" fill="#1c2422">+ login(id, nome, email, tipo): void</text>
+<text x="42" y="604" font-size="12.5" fill="#1c2422">+ logout(): void</text>
+<text x="42" y="624" font-size="12.5" fill="#1c2422">+ estaLogado(): bool</text>
+<text x="42" y="644" font-size="12.5" fill="#1c2422">+ ehAdmin(): bool</text>
+<text x="42" y="664" font-size="12.5" fill="#1c2422">+ usuarioId(): int</text>
+<text x="42" y="684" font-size="12.5" fill="#1c2422">+ usuarioNome(): string</text>
+<text x="42" y="704" font-size="12.5" fill="#1c2422">+ exigirLogin(redirect): void</text>
+<text x="42" y="724" font-size="12.5" fill="#1c2422">+ exigirAdmin(redirect): void</text>
+</g>
+<g font-family="Consolas, Menlo, monospace">
+<rect x="380" y="502" width="320" height="98" rx="6" fill="#ffffff" stroke="#1c3d3a" stroke-width="1.4"/>
+<rect x="380" y="502" width="320" height="50" rx="6" fill="#163d3a"/>
+<rect x="380" y="544" width="320" height="8" fill="#163d3a"/>
+<text x="540.0" y="518" text-anchor="middle" font-size="11" fill="#dfeeec" font-style="italic">&#171;singleton&#187;</text>
+<text x="540.0" y="540" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Database</text>
+<rect x="380" y="552" width="320" height="14" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<rect x="380" y="566" width="320" height="34" fill="#ffffff" stroke="#c8d6d3" stroke-width="1"/>
+<text x="392" y="584" font-size="12.5" fill="#1c2422">+ getConnection(): PDO</text>
+</g>
+<rect x="750" y="502" width="320" height="98" rx="6" fill="#fdf3e3" stroke="#e2963a" stroke-width="1.2"/>
+<text x="764" y="524" font-size="12" fill="#8a5a12" font-weight="700">Nota</text>
+<text x="764" y="544" font-size="12" fill="#6b4a17">Usuario, Categoria, Setor, Recurso</text>
+<text x="764" y="562" font-size="12" fill="#6b4a17">e Reserva dependem de Database</text>
+<text x="764" y="580" font-size="12" fill="#6b4a17">(«use») para obter a conexão PDO</text>
+<text x="764" y="598" font-size="12" fill="#6b4a17">utilizada em todas as operações CRUD.</text>
+<line x1="330" y1="221.0" x2="380" y2="261.0" stroke="#5c6d69" stroke-width="1.4"  />
+<text x="344" y="213.0" font-size="11" fill="#5c6d69" text-anchor="middle">1</text>
+<text x="366" y="253.0" font-size="11" fill="#5c6d69" text-anchor="middle">0..*</text>
+<text x="355.0" y="231.0" font-size="11.5" fill="#163d3a" text-anchor="middle" font-style="italic">realiza</text>
+<line x1="700" y1="261.0" x2="750" y2="261.0" stroke="#5c6d69" stroke-width="1.4"  />
+<text x="714" y="253.0" font-size="11" fill="#5c6d69" text-anchor="middle">0..*</text>
+<text x="736" y="253.0" font-size="11" fill="#5c6d69" text-anchor="middle">1</text>
+<text x="725.0" y="251.0" font-size="11.5" fill="#163d3a" text-anchor="middle" font-style="italic">refere-se a</text>
+<line x1="1070" y1="261.0" x2="1120" y2="191.0" stroke="#5c6d69" stroke-width="1.4"  />
+<text x="1084" y="253.0" font-size="11" fill="#5c6d69" text-anchor="middle">0..*</text>
+<text x="1106" y="183.0" font-size="11" fill="#5c6d69" text-anchor="middle">1</text>
+<text x="1095.0" y="216.0" font-size="11.5" fill="#163d3a" text-anchor="middle" font-style="italic">classificado em</text>
+<path d="M 990.0,442 L 990.0,613.0 L 1120,613.0" fill="none" stroke="#5c6d69" stroke-width="1.4" marker-end="url(#arrowOpen)"/>
+<text x="1046.0" y="605.0" font-size="11.5" fill="#163d3a" text-anchor="middle" font-style="italic">é responsável por</text>
+<text x="1000.0" y="458" font-size="11" fill="#5c6d69">0..*</text>
+<text x="1100" y="605.0" font-size="11" fill="#5c6d69">1</text>
+<path d="M 180,502 L 180,362" fill="none" stroke="#9aa8a5" stroke-width="1.4" stroke-dasharray="6,5" marker-end="url(#arrowOpen)"/>
+<text x="250" y="432.0" font-size="11.5" fill="#163d3a" text-anchor="middle" font-style="italic">&#171;use&#187; autentica</text>
+<path d="M 540,502 L 540,472 L 180,472 L 180,362" fill="none" stroke="#9aa8a5" stroke-width="1.2" stroke-dasharray="4,5" marker-end="url(#arrowOpen)"/>
+</svg>
